@@ -64,7 +64,7 @@ export class SrcdsLogParser {
 
 	private getDate(dateTokens: string) : moment.Moment {
 		// Assumption: date format is always the same - 06/09/2016 - 10:07:28
-		let m =  moment(dateTokens, "MM/DD/YYYY - HH:mm:ss", true);
+		let m =  moment(dateTokens, "MM/DD/YYYY - HH:mm:ss.SSS", true);
 		if (m.isValid() == false) {
 			console.error("Invalid date: ", dateTokens);
 		}
